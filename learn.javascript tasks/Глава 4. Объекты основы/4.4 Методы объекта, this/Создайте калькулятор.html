@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    let calculator = {
+         read() {
+            let firstNum = prompt("Введите первое значнение:", "");
+            let secondNum = prompt("Введите второе значнение:", "");
+            this.firstNum = firstNum;
+            this.secondNum = secondNum;
+        },
+        sum() {
+            return (+this.firstNum + +this.secondNum);
+        },
+        mul() {
+            return (this.firstNum * this.secondNum);
+        },
+    }
+
+    calculator.read();
+    alert( calculator.sum() );
+    alert( calculator.mul() );
+  </script>
+</body>
+</html>

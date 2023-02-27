@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    'use strict';
+    function random(){
+        let min = prompt("Введите min:", "");
+        let max = prompt("Введите max:", "");
+        if (firstNum == '' || firstNum === null){
+            return null;
+        }
+        else if (isFinite(firstNum) === true){
+            return +firstNum;
+        }
+        else{
+           return readNumber();
+        }
+    }
+    alert(readNumber());
+  </script>
+</body>
+</html>
