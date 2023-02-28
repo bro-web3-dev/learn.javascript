@@ -4,11 +4,11 @@
   <script>
     'use strict';
     let arr = ["Джаз", "Блюз"];
-    function sumInput(){
-        let num = prompt("Введите значение:", "");
-        arr.push(num);
-        
-    }
+    arr.push("Рок-н-ролл");
+    arr[Math.floor((arr.length - 1) / 2)] = "Классика";
+    alert( arr.shift() );
+    arr.unshift("Рэп", "Регги");
+    alert(arr);
   </script>
 </body>
 </html>
