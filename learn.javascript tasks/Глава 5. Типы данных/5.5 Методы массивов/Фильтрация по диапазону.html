@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    'use strict';
+    function camelize(str){
+        let newStr;
+        let arr = str.split("-");
+        arr.map((element, index) => {
+          if (index == 0){
+            element;
+          }
+          else {
+            element[0].toUpperCase() + element.slice(1);
+          }             
+        });
+        newStr = arr.join("");
+        return newStr;}
+    camelize("background-color");
+  </script>
+</body>
+</html>
