@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    'use strict';
+    function Calculator() {
+      this.sign = {
+        "-": (a, b) => a - b,
+        "+": (a, b) => a + b
+      },
+      this.calculate = function (str){
+        let strToArr = str.split(' ');
+        let a = +strToArr[0];
+        let operator = strToArr[1];
+        let b = +strToArr[2];
+        if (!this.sign[operator] || a == NaN || b == NaN ) {
+          return "Error";
+        }
+        return this.sign[operator](a,b);
+      }
+      this.addMethod = function (name, func){
+        this.sign[name] = func;
+      }};
+
+      let calc = new Calculator;
+
+      alert( calc.calculate("3 + 7") ); // 10
+      let powerCalc = new Calculator;
+      powerCalc.addMethod("*", (a, b) => a * b);
+      powerCalc.addMethod("/", (a, b) => a / b);
+      alc.addMethod("**", (a, b) => a ** b);
+
+      let result = powerCalc.calculate("2 ** 3");
+      alert( result ); // 8
+
+    
+  </script>
+</body>
+</html>

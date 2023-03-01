@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    'use strict';
+    let arr = [1, 2, 3];
+
+    function shuffle(arr) {
+      arr.sort(() => Math.random() - 0.5);
+      alert(arr);
+    }
+
+    shuffle(arr);
+    shuffle(arr);
+    shuffle(arr);
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    'use strict';
+    let arr = ["HTML", "JavaScript", "CSS"];
+    function copySorted(arr){
+      let copy = arr.concat();
+      let sort = copy.sort((a, b) => a > b ? 1 : -1);
+      let sorted = sort.sort((a, b) => a.localeCompare(b));
+      return sorted;
+    }
+    let sorted = copySorted(arr);
+    alert( sorted ); // CSS, HTML, JavaScript
+    alert( arr ); // HTML, JavaScript, CSS (без изменений)
+  </script>
+</body>
+</html>
