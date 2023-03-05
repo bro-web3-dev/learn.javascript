@@ -3,20 +3,17 @@
 <body>
   <script>
     'use strict';
-    function camelize(str){
-        let newStr;
-        let arr = str.split("-");
-        arr.map((element, index) => {
-          if (index == 0){
-            element;
-          }
-          else {
-            element[0].toUpperCase() + element.slice(1);
-          }             
-        });
-        newStr = arr.join("");
-        return newStr;}
-    camelize("background-color");
+    function filterRange(arr, a, b) {
+      return arr.filter(item => (
+        a <= item && item <= b
+        ));
+    }
+
+    let arr = [5, 3, 8, 1];
+    let filtered = filterRange(arr, 1, 4);
+
+    alert( filtered ); // 3,1 (совпадающие значения)
+    alert( arr ); // 5,3,8,1 (без изменений)
   </script>
 </body>
 </html>

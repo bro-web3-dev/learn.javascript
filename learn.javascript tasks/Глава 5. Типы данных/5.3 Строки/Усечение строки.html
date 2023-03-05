@@ -4,15 +4,17 @@
   <script>
    'use strict';
     let str = prompt("Введите строку:", "Напрмер: Привет");
-    function checkSpam(str){
-        if ( str != "" && str != undefined ) {
-            let _str = str;
-            let newStr =_str.toLowerCase();
-            return newStr.includes('viagra') || newStr.includes('xxx');
-             }
+    function truncate(str, maxlength){
+        if ( str.length > maxlength ) {
+          return str.slice(0, maxlength - 1) + '…';
+        }
+
+        else {
+          return str;
+        }
             
     }
-    alert(checkSpam(str)); 
+    alert(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20)); 
   </script>
 </body>
 </html>
